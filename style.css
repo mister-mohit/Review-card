@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-image: url("./images/bg-pattern-top-desktop.svg") , url("./images/bg-pattern-bottom-desktop.svg")  ;
+    background-position: left 0px top 0px, right 0px bottom 0px;
+    background-repeat: no-repeat, no-repeat;
+   
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: repeat(2,min-content);
+    width: 1000px;
+    gap:40px;
+}
+
+.heading{
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    color:hsla(300, 43%, 22%);
+}
+
+.reviews{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.heading > p{
+    font-size: 15px;
+}
+
+.rating-box{
+    width: 80%;
+    background-color: hsla(300, 24%, 96%);
+    margin-bottom: 10px;
+    padding:20px;
+    font-size: 15px;
+    border-radius: 5px;
+    color:hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+
+.rating-box > span{
+    margin-left: 40px;
+}
+.b1{margin-left: 15px;}
+.b2{margin-left: 45px;}
+.b3{margin-left: 75px;}
+
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.review-box img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.head{
+    display: flex;
+    align-items : center;
+    margin-bottom: 20px;
+}
+
+.review-box{
+    border-radius: 10px;
+    padding: 40px;
+    background-color: hsla(300, 43%, 22%);
+    height: 268px;
+}
+
+.name, .details{
+    color: white;
+}
+
+.title{
+    color:hsl(333, 80%, 67%);
+}
+
+.details{
+    line-height: 25px;
+}
+ 
+.rb2{
+    margin-top: 20px;
+}
+
+.rb3{
+    margin-top: 40px;
+}
+
+@media (max-width : 1000px ){
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 378px;
+    }
+
+    .heading{
+        text-align: center;
+    }
+
+    .b1, .b2, .b3{
+        margin: 20px auto;
+    }
+
+    .reviews{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rating-box{
+        display:flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .rating-box > span{
+        margin-left: 0px;
+    }
+    
+}
